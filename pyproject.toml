@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ipylisten"
+version = "0.1.0"
+description = "Dictate instructions in Jupyter, the ear of AI-assistants working in Jupyter"
+requires-python = ">=3.9"
+readme = "README.md"
+authors = [
+  { name = "Robert Haase" }
+]
+license = { text = "BSD-3" }
+keywords = ["jupyter", "speech", "dictation", "openai", "llm", "voice"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Framework :: Jupyter",
+  "Topic :: Text Processing :: Linguistic",
+  "Topic :: Scientific/Engineering :: Human Machine Interfaces",
+]
+dependencies = [
+  "openai>=1.30.0",
+  "ipython>=8.0.0",
+  "soundfile",
+  "sounddevice"
+]
+
+[project.urls]
+Homepage = "https://github.com/haesleinhuepf/ipylisten"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ipylisten"]
